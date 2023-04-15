@@ -1,0 +1,3 @@
+Below has two tabs then ten backspaces then a tab.
+It should end up at the first tab stop:
+pretab			after
