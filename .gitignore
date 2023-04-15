@@ -1,3 +1,5 @@
 *.pdf
 *.o
 detab/detab
+forkit-tryit/forkit
+forkit-tryit/tryit
