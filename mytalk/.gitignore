@@ -1,0 +1,6 @@
+*
+!.gitignore
+!mytalk.c
+!talk.h
+!Makefile
+
