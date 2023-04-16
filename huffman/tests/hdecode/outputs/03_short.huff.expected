@@ -1,0 +1,6 @@
+This is a short text file.  Not much different than other short text files.
+Since its a text file <tab> 	it will not have many characters it it.  Just
+normal text characters and a few escapes like \n and \t's... but that
+is not very exciting.  			<a few more tabs>.
+
+When you run your program against the binary file... then it gets cool

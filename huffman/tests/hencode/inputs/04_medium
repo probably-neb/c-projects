@@ -1,0 +1,56 @@
+
+This is a medium length text file.  This file is also very boring.  Not
+sure why we even had this test case.  If your program works on small files and 
+binary files, it will work on this file.  But it gives you the student
+another chance to test your program's performance against a test case.
+
+The Makefile below is the one I used for huff.  It is included here
+to make this file longer.  Here are some other characters to increase your 
+tree size:
+
+!@#$%^&*()_+~`1234567890-=QWERTYUIOP{}|qwertyuiop[]\qwertyuiop[]\qwertyuiop[]\
+ASDFGHJKL:"":LKJHGFDSAasdfghjkl;'ZXCVBNM<>?  ?><MNBVCXZzxxcvbnm,.//.,mnbvckdkd
+kd
+
+#
+# Hugh Smith - huff - huffman encoding/decoding
+# CPE317 - Winter, 2005
+
+FLAGS = -g -Wall -ansi -pedantic
+
+all: huff-e huff-d
+
+huff-e: huff-e.o node.o link.o tree.o util.o
+	gcc ${FLAGS} -o huff-e huff-e.o node.o link.o tree.o util.o
+
+huff-d: huff-d.o node.o link.o tree.o util.o
+	gcc ${FLAGS} -o huff-d huff-d.o node.o link.o tree.o util.o
+
+huff-e.o: huff-e.c node.h link.h util.h tree.h
+	gcc ${FLAGS} -c huff-e.c
+
+huff-d.o: huff-d.c node.h link.h util.h tree.h
+	gcc ${FLAGS} -c huff-d.c
+
+node.o: node.c node.h util.h
+	gcc ${FLAGS} -c node.c
+
+link.o: link.c link.h node.h util.h tree.h
+	gcc ${FLAGS} -c link.c
+
+tree.o: tree.c tree.h node.h link.h util.h
+	gcc ${FLAGS} -c tree.c
+
+util.o: util.h util.c
+	gcc ${FLAGS} -c util.c
+
+clean:
+	rm -f *.o
+	rm -f huff-e
+	rm -f huff-d
+	rm -f core*
+
+etags:
+	rm -f etags
+	etags *.c
+
