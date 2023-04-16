@@ -1,0 +1,12 @@
+[1;32mmush2[0m
+[1;32mout[0m
+[1;4;33mMakefile[0m
+[38;5;105masgn6.pdf[0m
+[38;5;137mmush2.o[0m
+mush2.c
+mush2.h
+syntax_test1.in
+syntax_test2.in
+syntax_test3.in
+test1.in
+test1.sol
