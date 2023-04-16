@@ -1,0 +1,48 @@
+/*
+ * Useful debugging code for tar.
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: debug.c,v $
+ *         Revision 1.1  2010-10-27 21:23:35-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+#include "debug.h"
+#include <time.h>
+
+void debug_print_header(FILE *where, struct tar_header *hdr){
+  fprintf(stderr, "  char      name[]: %s\n", hdr->name     );
+  fprintf(stderr, "  mode_t      mode: 0%04o\n",hdr->mode     );
+  fprintf(stderr, "  uid_t        uid: %d\n", (int)hdr->uid      );
+  fprintf(stderr, "  gid_t        gid: %d\n", (int)hdr->gid      );
+  fprintf(stderr, "  size_t      size: %d\n", (int)hdr->size     );
+  fprintf(stderr, "  time_t     mtime: %d --- %s",
+          (int)hdr->mtime, ctime(&hdr->mtime));
+  fprintf(stderr, "  int       chksum: %d\n", hdr->chksum   );
+  fprintf(stderr, "  char    typeflag: %c\n", hdr->typeflag );
+  fprintf(stderr, "  char  linkname[]: %s\n", hdr->linkname );
+  fprintf(stderr, "  char     magic[]: %s\n", hdr->magic    );
+  fprintf(stderr, "  char   version[]: %s\n", hdr->version  );
+  fprintf(stderr, "  char     uname[]: %s\n", hdr->uname    );
+  fprintf(stderr, "  char     gname[]: %s\n", hdr->gname    );
+  fprintf(stderr, "  int     devmajor: %d\n", hdr->devmajor );
+  fprintf(stderr, "  int     devminor: %d\n", hdr->devminor );
+  fprintf(stderr, "  char    prefix[]: %s\n", hdr->prefix   );
+}
+
+void px(unsigned char *p, int size) {
+  int i;
+  for(i=0;i<size;i++)
+    printf("0x%02x ", p[i]);
+  putchar('\n');
+}
+

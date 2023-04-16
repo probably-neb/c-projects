@@ -1,0 +1,118 @@
+/*
+ * block reading functions for mytar.  This is to allow a block to be read
+ * then pushed back on the input stream.  Should never cache more than two
+ * blocks at a time, but it can handle it.
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: blocks.c,v $
+ *         Revision 1.1  2010-10-27 21:23:35-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#include "blocks.h"
+
+
+#define CACHE_THRESHOLD 100
+static blockbuffer buffercache=NULL;
+static int cachecount=0;
+
+static blockbuffer new_buffer () {
+  /* allocate a new buffer */
+  blockbuffer new;
+  if ( buffercache ) {
+    new = buffercache;
+    buffercache = buffercache->next;
+    cachecount--;
+  } else if ( !(new = malloc(sizeof (struct blockbuffer)))) {
+    perror(__FUNCTION__);
+    exit(2);
+  }
+  new->next=NULL;
+  return new;
+}
+
+static void release_buffer(blockbuffer b) {
+  /* deallocate a buffer */
+  if ( cachecount >= CACHE_THRESHOLD ) {
+    free(b);
+  } else {
+    b->next = buffercache;
+    cachecount++;
+  }
+}
+
+blocklist open_blocklist(int fd, const char *filename){
+  /* set up the data structure to allow block buffering */
+  blocklist new;
+
+  if ( !(new = malloc(sizeof (struct blocklist)))) {
+    perror(__FUNCTION__);
+    exit(2);
+  }
+  new->fd = fd;
+  new->filename=filename;
+  new->block=NULL;
+
+  return new;
+}
+
+void close_blocklist(blocklist list) {
+  /* free this blocklist and any cached blocks */
+  blockbuffer b;
+  for(b=list->block; b; b=b->next)
+    release_buffer(b);
+  free(list);
+}
+
+void unread_block(blocklist list, char block[MT_BLOCKSIZE]) {
+  /* push a block back on the list */
+  blockbuffer b;
+
+  b = new_buffer();
+  memcpy(b->data, block, MT_BLOCKSIZE);
+
+  /* put this at the head of the list */
+  b->next = list->block;
+  list->block=b;
+}
+
+
+char *read_block(blocklist blist, char block[MT_BLOCKSIZE]) {
+  /* read a single block.  If it's not full size, return an error
+   * otherwise return the block read
+   */
+  int num;
+  char *res = block;
+  blockbuffer b;
+
+  if ( blist->block ) {
+    /* there are cached blocks, return one */
+    b = blist->block;
+    memcpy(block, b->data, MT_BLOCKSIZE);
+    blist->block = blist->block->next;
+    release_buffer(b);
+  } else {
+    /* Actually read the data */
+    if ((num = read(blist->fd, block, MT_BLOCKSIZE)) != MT_BLOCKSIZE) {
+      if ( num < 0 )
+        perror("read");
+      res = NULL;
+    }
+  }
+  return res;
+}
+

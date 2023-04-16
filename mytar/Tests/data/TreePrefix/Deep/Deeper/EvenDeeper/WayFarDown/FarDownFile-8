@@ -1,0 +1,143 @@
+/*
+ * options:  This actually creates the options variables
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: options.c,v $
+ *         Revision 1.2  2010-10-24 13:53:22-07  pnico
+ *         opt_verbose should really default to "shaddup"
+ *
+ *         Revision 1.1  2010-10-24 13:12:43-07  pnico
+ *         Initial revision
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include "options.h"
+
+/* definitions for the option variables are below.  Generally,
+ * global variables are considered poor-form, but really nothing
+ * cries out for a global like options that control the global
+ * behavior of the program.
+ */
+int   opt_verbose  = 0;          /* chatter */
+int   opt_strict   = FALSE;      /* really enforce POSIX */
+int   opt_mode     = MT_UNKNOWN; /* we don't know what we're doing */
+int   opt_preserve = FALSE;      /* don't bother */
+char *opt_tarfile  = NULL;       /* default to std{in,out} */
+
+void print_options(FILE *where) {
+  /* print the options out.  Useful for debugging */
+  fprintf(where,"opt_verbose  = %d\n",opt_verbose );
+  fprintf(where,"opt_strict   = %d\n",opt_strict  );
+  fprintf(where,"opt_mode     = %d\n",opt_mode    );
+  fprintf(where,"opt_preserve = %d\n",opt_preserve);
+  fprintf(where,"opt_tarfile  = %s\n",opt_tarfile );
+}
+
+static void usage_exit(char *name) {
+  /* print a usage message and bail */
+  char *usage="usage: %s [ctxSp[f tarfile]] [file1 [ file2 [...] ] ]\n";
+  fprintf(stderr, usage, name);
+  exit(EXIT_FAILURE);
+}
+
+int parse_options(int argc, char *argv[]){
+  /*
+   *  This function parses the command line and sets parameters
+   *  based upon command line options.
+   */
+  char c;
+  int i;
+  int err=0;
+  int toomany=0;
+  int optind=2;                 /* this is the expected location */
+
+  /* tar's option structure is a little odd.  It's a bunch of letters
+   * in argv[1].  Always.
+   */
+  if ( argc < 2 ) {
+    fprintf(stderr,
+            "%s: you must specify at least one of the 'ctx' options.\n",
+            argv[0]);
+    usage_exit(argv[0]);
+  }
+
+  /* look for the arguments in argv[1] */
+  for(i=0; i < strlen(argv[1]); i++) {
+    c=argv[1][i];
+    switch(c){
+    case 'v':
+      opt_verbose++;            /* make it more verbose */
+      break;
+    case 'p':
+      opt_preserve=TRUE;        /* Try to preserve permissions and owners */
+      break;
+    case 'S':
+      opt_strict = TRUE;        /* enforce POSIX for real */
+      break;
+    case 'f':                   /* use the named tarfile */
+      if (argv[2] != NULL) {
+        opt_tarfile = argv[2];
+        optind++;
+      } else {
+        fprintf(stderr, "%s: option 'f' requires an archive name.\n",
+                argv[0]);
+        err++;
+      }
+      break;
+    case 't':
+      if (opt_mode == MT_UNKNOWN) {
+        opt_mode = MT_LIST;
+      } else {
+        toomany++;
+        err++;
+      }
+      break;
+    case 'x':
+      if (opt_mode == MT_UNKNOWN) {
+        opt_mode = MT_EXTRACT;
+      } else {
+        toomany++;
+        err++;
+      }
+      break;
+    case 'c':
+      if (opt_mode == MT_UNKNOWN) {
+        opt_mode = MT_CREATE;
+      } else {
+        toomany++;
+        err++;
+      }
+      break;
+    default:
+      fprintf(stderr,"%s: unrecognized option '%c'.\n", argv[0],c);
+      err++;
+      break;
+    }
+  }
+
+  if ( toomany ) {
+    fprintf(stderr, "%s: you may only choose one of the 'ctx' options.\n",
+            argv[0]);
+  } else if ( opt_mode == MT_UNKNOWN ){
+    fprintf(stderr, "%s: you must choose one of the 'ctx' options.\n",
+            argv[0]);
+    err++;
+  }
+
+  if (err)
+    usage_exit(argv[0]);
+
+  return optind;
+}

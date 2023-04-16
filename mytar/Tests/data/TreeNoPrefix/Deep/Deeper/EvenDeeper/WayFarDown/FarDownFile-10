@@ -1,0 +1,110 @@
+/*
+ * Permission string functions: Make a nice looking permission string for
+ * the caller.
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: perms.c,v $
+ *         Revision 1.2  2010-10-27 21:17:18-07  pnico
+ *         cleaned up the handling of suid/sgid bits
+ *
+ *         Revision 1.1  2010-10-24 16:13:56-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+#include <sys/stat.h>
+#include <stdio.h>
+#include <tar.h>
+#include "perms.h"
+
+static char suidbit(mode_t mode, int xflag) {
+  char res;
+  if ( (mode & S_ISUID) && xflag )
+    res = 's';
+  else if ( (mode & S_ISUID) )
+    res = 'S';
+  else if ( xflag )
+    res = 'x';
+  else
+    res = '-';
+  return res;
+}
+
+static char sgidbit(mode_t mode, int xflag) {
+  char res;
+  if ( (mode & S_ISGID) && xflag )
+    res = 's';
+  else if ( (mode & S_ISGID) )
+    res = 'S';
+  else if ( xflag )
+    res = 'x';
+  else
+    res = '-';
+  return res;
+}
+
+static char stickybit(mode_t mode, int xflag) {
+  /* properly parses the other permission bit */
+  char res;
+
+  if ( (mode & S_ISVTX)  && xflag )
+    res = 't';
+  else if ( mode & S_ISVTX  )
+    res = 'T';
+  else if ( xflag )
+    res = 'x';
+  else
+    res = '-';
+  return res;
+}
+
+
+char *mode2str(char perms[MODELEN], mode_t mode, char typeflag){
+  /* translate the file permissions for the given mode
+   * by sb into the string pointed to by perms.
+   *   It extracts each permission bit by and(&)ing the st_modes
+   * with the appropriate bit.  If the result is non-zero (true),
+   * that permission must be available.
+   */
+  char type;
+  if ( (typeflag == REGTYPE) || (typeflag == AREGTYPE))
+    type = '-';
+  else if ( typeflag == LNKTYPE )
+    type = 'h';
+  else if ( typeflag == SYMTYPE )
+    type = 'l';
+  else if ( typeflag == BLKTYPE )
+    type = 'b';
+  else if ( typeflag == CHRTYPE )
+    type = 'c';
+  else if ( typeflag == DIRTYPE )
+    type = 'd';
+  else if ( typeflag == FIFOTYPE )
+    type = 'p';
+  else
+    type = '?';                 /* Dunno what it is... */
+
+  sprintf(perms,"%c%c%c%c%c%c%c%c%c%c",
+          type,
+          (mode & S_IRUSR) ? 'r' : '-',
+          (mode & S_IWUSR) ? 'w' : '-',
+          suidbit(mode,(mode & S_IXUSR)),
+          (mode & S_IRGRP) ? 'r' : '-',
+          (mode & S_IWGRP) ? 'w' : '-',
+          sgidbit(mode,(mode & S_IXGRP)),
+          (mode & S_IROTH) ? 'r' : '-',
+          (mode & S_IWOTH) ? 'w' : '-',
+          stickybit(mode,(mode & S_IXGRP))
+    );
+  return perms;
+}
+
+

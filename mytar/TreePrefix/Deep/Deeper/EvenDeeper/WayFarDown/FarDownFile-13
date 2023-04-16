@@ -1,0 +1,96 @@
+/*
+ * Maintain a table of contents for a tarfile.  Needed for opt_preserve.
+ * Also may come in handy for creation.
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: toc.c,v $
+ *         Revision 1.1  2010-10-27 21:23:35-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+#include "toc.h"
+#include "tar.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+
+/* This is a weak implementation, but it will do for now.
+ * Eventually this should be changed over to a hashed scheme, possibly
+ * two: one for name and another for ino.
+ */
+struct toc {
+  toc_entry list;               /* not exciting */
+};
+
+static toc_entry new_entry(char *path, ino_t ino) {
+  /* allocate a new toc entry */
+  toc_entry new;
+  if ( !(new = malloc(sizeof(struct toc_entry)))) {
+    perror(__FUNCTION__);
+    exit(3);
+  }
+  return new;
+}
+
+void destroy_toc(tar_toc toc) {
+  /* FIXME stub */
+}
+
+tar_toc create_toc(){
+  /* does nothing right now */
+  tar_toc toc;
+  if ( !(toc = malloc(sizeof(struct toc)))) {
+    perror(__FUNCTION__);
+    exit(3);
+  }
+  toc->list = NULL;
+  return toc;
+}
+
+void add_to_toc(tar_toc toc, char *name, struct tar_header *hdr,
+                ino_t ino) {
+  /* Add this file to the list */
+  toc_entry new;
+  if ( toc ) {
+    new = new_entry(name, ino);
+    new->next = toc->list;
+    toc->list = new;
+  }
+}
+
+toc_entry get_toc_name(tar_toc toc, char *name){
+  /* return the entry with this name, or NULL on failure */
+  toc_entry e = NULL;
+  if ( toc ) {
+    for(e=toc->list; e; e=e->next){
+      if (!strcmp(name, e->path))
+        break;
+    }
+  }
+  return e;
+}
+
+toc_entry get_toc_ino(tar_toc toc, ino_t ino){
+  /* return the entry with this inode, or NULL on failure */
+  toc_entry e = NULL;
+  if ( toc ) {
+    for(e=toc->list; e; e=e->next){
+      if (e->inode == ino)
+        break;
+    }
+  }
+  return e;
+}
+

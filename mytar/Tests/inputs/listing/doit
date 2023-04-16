@@ -1,0 +1,20 @@
+#!/bin/csh -f
+
+set num=0
+foreach f ( *.cmd ) 
+     if ( { ( grep -q tvf $f > /dev/null ) } ) continue
+
+     set root = `echo $f | sed 's/[0-9]*_//'`
+     set newname=../extraction/`printf "%02d_%s" $num $root`
+     @ num ++
+
+     echo $f ' => ' $newname
+
+     set cargs=`grep ARGS: $f | sed 's/.*://'`
+     set cflag=`grep FLAGS: $f | sed 's/.*://' | sed 's/tf/xf/'`
+     set cdesc=`grep NAME: $f | sed 's/.*://'`
+     set where=`grep WHERE: $f | sed 's/.*://'`
+
+     echo NAME: $cdesc  > $newname
+     echo ARGS: $cflag $where/$cargs >> $newname
+end

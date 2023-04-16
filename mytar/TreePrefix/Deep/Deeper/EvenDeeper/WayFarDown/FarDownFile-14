@@ -1,0 +1,26 @@
+#ifndef TOCH
+#define TOCH
+
+#include "mytar.h"
+
+
+typedef struct toc *tar_toc;        /* actual structure is private */
+
+typedef struct toc_entry *toc_entry;
+struct toc_entry {
+  char path[MT_MAX_NAME + 1];   /* the name */
+  ino_t inode;                  /* inode number, if known (used for detecting
+                                 * hardlinks
+                                 */
+  toc_entry next;               /* a next pointer for listing or hashing */
+};
+
+void destroy_toc(tar_toc toc);
+tar_toc create_toc();
+void add_to_toc(tar_toc toc, char *name, struct tar_header *hdr, ino_t ino);
+toc_entry get_toc_name(tar_toc toc, char *name);
+toc_entry get_toc_ino(tar_toc toc, ino_t ino);
+
+#define NO_INODE 0              /* an invalid inode number */
+
+#endif

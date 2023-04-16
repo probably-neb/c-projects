@@ -1,0 +1,6 @@
+NAME: A tree and a given name
+FLAGS: cf
+ARGS: TreeOneLevel JustAFile
+WHERE: DATADIR
+
+

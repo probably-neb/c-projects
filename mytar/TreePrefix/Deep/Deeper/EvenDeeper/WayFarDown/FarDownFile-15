@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include "mytar.h"
+
+int create_outfile(char *name, struct tar_header *hdr) {
+  /* create the given outfile with the given permissions.  This
+   * includes any leading directories
+   * Returns an open write file descriptor or -1 on failure.
+   */
+  fprintf(stderr,"Implement me (%s)\n", __FUNCTION__);
+  return -1;
+}
+

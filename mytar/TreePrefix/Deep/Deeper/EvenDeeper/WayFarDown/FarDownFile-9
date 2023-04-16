@@ -1,0 +1,44 @@
+/*
+ *  This file contains extern declarations for global option variables.
+ *
+ *  These are actually defined in options.c
+ *
+ * Revision History:
+ *         $Log: options.h,v $
+ *         Revision 1.2  2010-10-24 13:15:36-07  pnico
+ *         Forgot the prototype for print_options()
+ *
+ *         Revision 1.1  2010-10-24 13:13:14-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+
+#ifndef OPTIONH
+#define OPTIONH
+
+extern int   opt_verbose;       /* chatter */
+extern int   opt_strict;        /* really enforce POSIX rules */
+extern int   opt_mode;          /* are we reading, writing, what? */
+extern int   opt_preserve;      /* try to preserve ownership and permissions */
+extern char *opt_tarfile;       /* what archive are we working on? */
+
+/* possible values for opt_mode */
+#define MT_UNKNOWN 0
+#define MT_LIST    1
+#define MT_EXTRACT 2
+#define MT_CREATE  3
+
+#ifndef FALSE
+#define FALSE 0
+#endif
+
+#ifndef TRUE
+#define TRUE 1
+#endif
+
+/* and function prototypes... */
+void print_options(FILE *where);
+int parse_options(int argc, char *argv[]);
+
+#endif

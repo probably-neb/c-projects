@@ -1,0 +1,495 @@
+'Mounten' wird für drei Dinge benutzt: 'Aufsitzen' auf Pferde, 'einklinken'
+von Festplatten in Dateisysteme, und, nun, 'besteigen' beim Sex.
+	-- Christa Keil
+%
+'Mounting' is used for three things: climbing on a horse, linking in a
+hard disk unit in data systems, and, well, mounting during sex.
+	-- Christa Keil
+%
+We can use symlinks of course... syslogd would be a symlink to syslogp and 
+ftpd and ircd would be linked to ftpp and ircp... and of course the 
+point-to-point protocal paenguin.
+	-- Kevin M. Bealer, commenting on the penguin Linux logo
+%
+Ha. I say let them try -- even vi+perl couldn't match the power of an
+editor which is, after all, its own OS.  ;-)
+	-- Johnie Ingram on debian-devel, about linking vim with libperl.so
+%
+'Mounten' wird fuer drei Dinge benutzt: 'Aufsitzen' auf Pferde, 'einklinken'
+von Festplatten in Dateisysteme, und, nun, 'besteigen' beim Sex.
+(Christa Keil in a German posting: "Mounting is used for three things:
+climbing on a horse, linking in a hard disk unit in data systems, and, well,
+mounting during sex".)
+%
+ VII. Certain bodies can pass through solid walls painted to resemble tunnel
+      entrances; others cannot.
+	This trompe l'oeil inconsistency has baffled generations, but at least
+	it is known that whoever paints an entrance on a wall's surface to
+	trick an opponent will be unable to pursue him into this theoretical
+	space.  The painter is flattened against the wall when he attempts to
+	follow into the painting.  This is ultimately a problem of art, not
+	of science.
+VIII. Any violent rearrangement of feline matter is impermanent.
+	Cartoon cats possess even more deaths than the traditional nine lives
+	might comfortably afford.  They can be decimated, spliced, splayed,
+	accordion-pleated, spindled, or disassembled, but they cannot be
+	destroyed.  After a few moments of blinking self pity, they reinflate,
+	elongate, snap back, or solidify.
+  IX. For every vengeance there is an equal and opposite revengeance.
+	This is the one law of animated cartoon motion that also applies to
+	the physical world at large.  For that reason, we need the relief of
+	watching it happen to a duck instead.
+   X. Everything falls faster than an anvil.
+	Examples too numerous to mention from the Roadrunner cartoons.
+		-- Esquire, "O'Donnell's Laws of Cartoon Motion", June 1980
+%
+Hark ye, Clinker, you are a most notorious offender.  You stand convicted of
+sickness, hunger, wretchedness, and want.
+		-- Tobias Smollet
+%
+What does it take for Americans to do great things; to go to the moon, to
+win wars, to dig canals linking oceans, to build railroads across a continent?
+In independent thought about this question, Neil Armstrong and I concluded
+that it takes a coincidence of four conditions, or in Neil's view, the
+simultaneous peaking of four of the many cycles of American life.  First, a
+base of technology must exist from which to do the thing to be done.  Second,
+a period of national uneasiness about America's place in the scheme of human
+activities must exist.  Third, some catalytic event must occur that focuses
+the national attention upon the direction to proceed.  Finally, an articulate
+and wise leader must sense these first three conditions and put forth with
+words and action the great thing to be accomplished.  The motivation of young
+Americans to do what needs to be done flows from such a coincidence of
+conditions. ...  The Thomas Jeffersons, The Teddy Roosevelts, The John
+Kennedys appear.  We must begin to create the tools of leadership which they,
+and their young frontiersmen, will require to lead us onward and upward.
+		-- Dr. Harrison H. Schmidt
+%
+Modern man is the missing link between apes and human beings.
+%
+HOGAN'S HEROES DRINKING GAME --
+	Take a shot every time:
+
+-- Sergeant Schultz says, "I knoooooowww nooooothing!"
+-- General Burkhalter or Major Hochstetter intimidate/insult Colonel Klink.
+-- Colonel Klink falls for Colonel Hogan's flattery.
+-- One of the prisoners sneaks out of camp (one shot for each prisoner to go).
+-- Colonel Klink snaps to attention after answering the phone (two shots
+	if it's one of our heroes on the other end).
+-- One of the Germans is threatened with being sent to the Russian front.
+-- Corporal Newkirk calls up a German in his phoney German accent, and
+	tricks him (two shots if it's Colonel Klink).
+-- Hogan has a romantic interlude with a beautiful girl from the underground.
+-- Colonel Klink relates how he's never had an escape from Stalag 13.
+-- Sergeant Schultz gives up a secret (two shots if he's bribed with food).
+-- The prisoners listen to the Germans' conversation by a hidden transmitter.
+-- Sergeant Schultz "captures" one of the prisoners after an escape.
+-- Lebeau pronounces "colonel" as "cuh-loh-`nell".
+-- Carter builds some kind of device (two shots if it's not explosive).
+-- Lebeau wears his apron.
+-- Hogan says "We've got no choice" when someone claims that the plan is
+	impossible.
+-- The prisoners capture an important German, and sneak him out the tunnel.
+%
+Operation Desert Slash
+
+WASHINGTON, D.C. -- High officials in the US military are planning on putting
+the  'Slashdot Effect' to use against Iraq. Pentagon computer experts think
+that the Slashdot Effect could topple key Net-connected Iraqi computer
+systems.  Such a Denial of Service attack could prove instrumental when the
+US invades.
+
+One Pentagon official said, "If I had a million dollars for every server that
+crashed as a result of being linked on Slashdot, I'd be richer than Bill
+Gates.  The Slashdot Effect is a very powerful weapon that the US military
+wants to tap into."
+
+Rob Malda has been contacted by top military brass.  According to anonymous
+sources, Malda will play a key part in the so-called "Operation Desert
+Slash".  Supposedly Malda will post several Slashdot articles with links to
+critical Iraqi websites right when the US invasion is set to begin. 
+Meanwhile, Pentagon operatives will begin a series of Denial of Service
+attacks on other key Iraqi computer systems. One source notes, "Since many
+Iraqi systems rely on Microsoft software, this task should be relatively
+simple."
+%
+Attack of the Tuxissa Virus
+
+What started out as a prank posting to comp.os.linux.advocacy yesterday has
+turned into one of the most significant viruses in computing history.
+The creator of the virus, who goes by the moniker "Anonymous Longhair",
+modified the Melissa virus to install Linux on infected machines.
+
+"It's a work of art," one Linux advocate told Humorix after he looked
+through the Tuxissa virus source code.  "This virus goes well beyond the
+feeble troublemaking of Melissa.  It actually configures a UMSDOS partition
+on the user's hard drive and then downloads and installs a stripped-down
+version of Slackware Linux."
+
+The email message that the virus is attached to has the subject "Important
+Message About Windows Security".  The text of the body says, "I want to let
+you know about some security problems I've uncovered in Windows 95/98/NT,
+Office 95/97, and Outlook. It's critically important that you protect your
+system against these attacks.  Visit these sites for more information..."
+The rest of the message contains 42 links to sites about Linux and free
+software.
+
+Details on how the virus started are a bit sketchy.  The "Anonymous
+Longhair" who created it only posted it to Usenet as an early April Fool's
+gag, demonstrating how easy it would be to mount a "Linux revolution".
+%
+Jargon Coiner (#10)
+
+An irregular feature that aims to give you advance warning of new jargon
+that we've just made up.
+
+* HOBTOB (Hanging Out By The O'Reilly Books): Seeking free Linux technical
+  support at a bookstore by waiting near the computer books for a geek to
+  come by and then casually asking them for help. 
+
+* MOOLA (Marketing Officially Organizes Linux Adoptance):  A press release
+  issued by a Dot Com (or Dot Con?) heralding their "support" for Linux
+  (i.e. "BigPortal.com adopts Linux as their official operating system by
+  adding five Linux-related links to their BigDirectory"); used to inflate
+  their stock price and rake in moola even though none of their employees
+  have ever used Linux and don't really care. 
+  
+* KARMA KOLLECTOR: Slashdot user who treats the acquisition of "karma" as
+  a game; often has a detailed strategy on how to sucker moderators into
+  raising the score of their posts (i.e. posting a comment with a title
+  like "Microsoft Sucks!!! (Score 3, Insightful)" or using "Only a fool
+  would moderate this down" as a signature). See also "Karma Whore".
+%
+"Oops," Says MPAA President 
+
+Recently, the United States filed a legal brief in support of the MPAA's
+argument that linking to the DeCSS source code is not protected by the
+First Amendment. 
+
+At the time, the MPAA was ecstatic. But not any longer. The tables have
+turned: the Federal government has filed a lawsuit against the movie
+industry, arguing that many Hollywood-produced movies 'link' to illegal
+content. The MPAA is now desperately wrapping itself up in the Bill of
+Rights. 
+
+"Murder is illegal. Showing a murder in a movie -- or, rather, 'linking'
+to it -- is also illegal," explained a spokesperson for the Coalition Of
+Angry Soccer Moms In Support Of Brow-Beating Movie Industry Executives, an
+interest group that has backed the government's lawsuit.
+%
+dynamic software linking table corrupted
+%
+/dev/clue was linked to /dev/null
+%
+Excellent day for putting Slinkies on an escalator.
+%
+"> I am using the Intel PCI backplane with default etchlink/jumper
+ > configuration and the EBSA285 configured as host bridge.
+
+ I'd suggest that you check, double check, triple check, take a photo of
+ the links and put it up on the web and get someone else to check all
+ the link settings on the EBSA285 card."
+
+ 	- Russell King on linux-arm-kernel
+%
+Alive without breath,
+As cold as death;
+Never thirsty, ever drinking,
+All in mail never clinking.
+%
+Once again dread deed is done.
+Canon sleeps,
+his all-knowing eye shaded
+to human chance and circumstance.
+Peace reigns anew o'er Pine Valley,
+but Canon's sleep is troubled.
+
+Beware, scant days past the Ides of July.
+Impatient hands wait eagerly
+to grasp, to hold
+scant moments of time
+wrested from life in the full
+glory of Canon's power;
+held captive by his unblinking eye.
+
+Three golden orbs stand watch;
+one each to toll the day, hour, minute
+until predestiny decrees his reawakening.
+When that feared moment arives,
+"Ask not for whom the bell tolls,
+It tolls for thee."
+		-- "I extended the loan on your Camera, at the Pine
+		   Valley Pawn Shop today"
+%
+She asked me, "What's your sign?"
+I blinked and answered "Neon,"
+I thought I'd blow her mind...
+%
+Strange things are done to be number one
+In selling the computer			The Druids were entrepreneurs,
+IBM has their strategem			And they built a granite box
+Which steadily grows acuter,		It tracked the moon, warned of monsoons,
+And Honeywell competes like Hell,	And forecast the equinox
+But the story's missing link		Their price was right, their future
+Is the system old at Stonemenge sold		bright,
+By the firm of Druids, Inc.		The prototype was sold;
+					From Stonehenge site their bits and byte
+					Would ship for Celtic gold.
+The movers came to crate the frame;
+It weighed a million ton!
+The traffic folk thought it a joke	The man spoke true, and thus to you
+(the wagon wheels just spun);		A warning from the ages;
+"They'll nay sell that," the foreman	Your stock will slip if you can't ship
+	spat,				What's in your brochure's pages.
+"Just leave the wild weeds grow;	See if it sells without the bells
+"It's Druid-kind, over-designed,	And strings that ring and quiver;
+"And belly up they'll go."		Druid repute went down the chute
+					Because they couldn't deliver.
+		-- Edward C. McManus, "The Computer at Stonehenge"
+%
+We don't need no indirection		We don't need no compilation
+We don't need no flow control		We don't need no load control
+No data typing or declarations		No link edit for external bindings
+Hey! did you leave the lists alone?	Hey! did you leave that source alone?
+Chorus:					(Chorus)
+	Oh No. It's just a pure LISP function call.
+
+We don't need no side-effecting		We don't need no allocation
+We don't need no flow control		We don't need no special-nodes
+No global variables for execution	No dark bit-flipping for debugging
+Hey! did you leave the args alone?	Hey! did you leave those bits alone?
+(Chorus)				(Chorus)
+		-- "Another Glitch in the Call", a la Pink Floyd
+%
+A list is only as strong as its weakest link.
+		-- Don Knuth
+%
+At first sight, the idea of any rules or principles being superimposed on
+the creative mind seems more likely to hinder than to help, but this is
+quite untrue in practice.  Disciplined thinking focuses inspiration rather
+than blinkers it.
+		-- G.L. Glegg, "The Design of Design"
+%
+If you ever want to have a lot of fun, I recommend that you go off and program
+an imbedded system.  The salient characteristic of an imbedded system is that
+it cannot be allowed to get into a state from which only direct intervention
+will suffice to remove it.  An imbedded system can't permanently trust anything
+it hears from the outside world.  It must sniff around, adapt, consider, sniff
+around, and adapt again.  I'm not talking about ordinary modular programming
+carefulness here.  No.  Programming an imbedded system calls for undiluted
+raging maniacal paranoia.  For example, our ethernet front ends need to know
+what network number they are on so that they can address and route PUPs
+properly.  How do you find out what your network number is?  Easy, you ask a
+gateway.  Gateways are required by definition to know their correct network
+numbers.  Once you've got your network number, you start using it and before
+you can blink you've got it wired into fifteen different sockets spread all
+over creation.  Now what happens when the panic-stricken operator realizes he
+was running the wrong version of the gateway which was giving out the wrong
+network number?  Never supposed to happen.  Tough.  Supposing that your
+software discovers that the gateway is now giving out a different network
+number than before, what's it supposed to do about it?  This is not discussed
+in the protocol document.  Never supposed to happen.  Tough.  I think you 
+get my drift.
+%
+	Long ago, in a finite state far away, there lived a JOVIAL
+character named Jack.  Jack and his relations were poor.  Often their
+hash table was bare.  One day Jack's parent said to him, "Our matrices
+are sparse.  You must go to the market to exchange our RAM for some
+BASICs."  She compiled a linked list of items to retrieve and passed it
+to him.
+	So Jack set out.  But as he was walking along a Hamilton path,
+he met the traveling salesman.
+	"Whither dost thy flow chart take thou?" prompted the salesman
+in high-level language.
+	"I'm going to the market to exchange this RAM for some chips
+and Apples," commented Jack.
+	"I have a much better algorithm.  You needn't join a queue
+there; I will swap your RAM for these magic kernels now."
+	Jack made the trade, then backtracked to his house.  But when
+he told his busy-waiting parent of the deal, she became so angry she
+started thrashing.
+	"Don't you even have any artificial intelligence?  All these
+kernels together hardly make up one byte," and she popped them out the
+window...
+		-- Mark Isaak, "Jack and the Beanstack"
+%
+Scientists were preparing an experiment to ask the ultimate question.
+They had worked for months gathering one each of every computer that was
+built. Finally the big day was at hand.  All the computers were linked
+together.  They asked the question, "Is there a God?".  Lights started
+blinking, flashing and blinking some more.  Suddenly, there was a loud
+crash, and a bolt of lightning came down from the sky, struck the
+computers, and welded all the connections permanently together.  "There
+is now", came the reply.
+%
+	The FIELD GUIDE to NORTH AMERICAN MALES
+
+SPECIES:	Cranial Males
+SUBSPECIES:	The Hacker (homo computatis)
+Courtship & Mating:
+	Due to extreme deprivation, HOMO COMPUTATIS maintains a near perpetual
+	state of sexual readiness.  Courtship behavior alternates between
+	awkward shyness and abrupt advances.  When he finally mates, he
+	chooses a female engineer with an unblinking stare, a tight mouth, and
+	a complete collection of Campbell's soup-can recipes.
+Track:
+	Trash cans full of pale green and white perforated paper and old
+	copies of the Allen-Bradley catalog.
+Comments:
+	Extremely fond of bad puns and jokes that need long explanations.
+%
+The moving cursor writes, and having written, blinks on.
+%
+We don't understand the software, and sometimes we don't understand the
+hardware, but we can *___see* the blinking lights!
+%
+"Oh dear, I think you'll find reality's on the blink again."
+-- Marvin The Paranoid Android
+%
+...we must counterpose the overwhelming judgment provided by consistent
+observations and inferences by the thousands.  The earth is billions of
+years old and its living creatures are linked by ties of evolutionary
+descent.  Scientists stand accused of promoting dogma by so stating, but
+do we brand people illiberal when they proclaim that the earth is neither
+flat nor at the center of the universe?  Science *has* taught us some
+things with confidence!  Evolution on an ancient earth is as well
+established as our planet's shape and position.  Our continuing struggle
+to understand how evolution happens (the "theory of evolution") does not
+cast our documentation of its occurrence -- the "fact of evolution" --
+into doubt.
+- Stephen Jay Gould, "The Verdict on Creationism", The Skeptical Inquirer,
+  Vol XII No. 2
+%
+"There is also a thriving independent student movement in
+Poland, and thus there is a strong possibility (though no
+guarantee) of making an EARN-Poland link, should it ever come
+about, a genuine link - not a vacuum cleaner attachment for a
+Bloc information gathering apparatus rationed to trusted
+apparatchiks."
+-- David Phillips, SUNY at Buffalo, about establishing a
+   gateway from EARN (Eurpoean Academic Research Network)
+   to Poland
+%
+  William Safire's rules for writing as seen in the New York Times
+
+     Do not put statements in the negative form.
+     And don't start sentences with a conjunction.
+     If you reread your work, you will find on rereading that a great
+     deal of repetition can be avoided by rereading and editing.
+     Never use a long word when a diminutive one will do.
+     Unqualified superlatives are the worst of all.
+     If any word is improper at the end of a sentence, a linking verb is.
+     Avoid trendy locutions that sound flaky.
+     Never, ever use repetitive redundancies.
+     Also, avoid awkward or affected alliteration.
+     Last, but not least, avoid cliche's like the plague.
+%
+And we can always supply them with a program that makes identical files
+into links to a single file.
+             -- Larry Wall in <199709292012.NAA09616@wall.org>
+%
+I wasn't recommending that we make the links for them, only provide them
+with the tools to do so if they want to take the gamble (or the gambol).
+             -- Larry Wall in <199709292259.PAA10407@wall.org>
+%
+I met my latest girl friend in a department store.  She was looking at
+clothes, and I was putting Slinkys on the escalators.
+		-- Steven Wright
+%
+When he got in trouble in the ring, [Ali] imagined a door swung open and
+inside he could see neon, orange, and green lights blinking, and bats
+blowing trumpets and alligators blowing trombones, and he could hear snakes
+screaming.  Weird masks and actors' clothes hung on the wall, and if he
+stepped across the sill and reached for them, he knew that he was committing
+himself to destruction.
+		-- George Plimpton
+%
+<Culus> "Hello?"  "Hi baybee"  "Are you Johnie Ingram?"  "For you I'll be
+        anyone" "Ermm.. Do you sell slink CD's?" "I love slinkies"
+%
+<aj> <Knghtbrd> the increase in tension worldwide (as evidenced by crime
+<aj>            and whatnot) over that time period looks a lot like Linux
+<aj>            growth since 1993
+<aj> ``Linux linked to worldwide crime epidemic!!''
+%
+* Omnic looks at his 33.6k link and then looks at Joy
+* Mercury cuddles his cable modem.. (=:]
+%
+			ACHTUNG!!!
+
+Das machine is nicht fur gefingerpoken und mittengrabben.  Ist easy schnappen
+der springenwerk, blowenfusen und corkenpoppen mit spitzensparken.  Ist nicht
+fur gewerken by das dummkopfen.  Das rubbernecken sightseeren keepen hands
+in das pockets.  Relaxen und vatch das blinkenlights!!!
+%
+In a minimum-phase system there is an inextricable link between
+frequency response, phase response and transient response, as they
+are all merely transforms of one another.  This combined with
+minimalization of open-loop errors in output amplifiers and correct
+compensation for non-linear passive crossover network loading can
+lead to a significant decrease in system resolution lost.  However,
+this all means jack when you listen to Pink Floyd.
+%
+... we must counterpose the overwhelming judgment provided by consistent
+observations and inferences by the thousands.  The earth is billions of
+years old and its living creatures are linked by ties of evolutionary
+descent.  Scientists stand accused of promoting dogma by so stating, but
+do we brand people illiberal when they proclaim that the earth is neither
+flat nor at the center of the universe?  Science *has* taught us some
+things with confidence!  Evolution on an ancient earth is as well
+established as our planet's shape and position.  Our continuing struggle
+to understand how evolution happens (the "theory of evolution") does not
+cast our documentation of its occurrence -- the "fact of evolution" --
+into doubt.
+		-- Stephen Jay Gould, "The Verdict on Creationism", 
+		   The Skeptical Inquirer, Vol. XII No. 2.
+%
+Eleventh Law of Acoustics:
+	In a minimum-phase system there is an inextricable link between
+	frequency response, phase response and transient response, as they
+	are all merely transforms of one another.  This combined with
+	minimalization of open-loop errors in output amplifiers and correct
+	compensation for non-linear passive crossover network loading can
+	lead to a significant decrease in system resolution lost.  However,
+	of course, this all means jack when you listen to Pink Floyd.
+%
+phosflink:
+	To flick a bulb on and off when it burns out (as if, somehow, that
+	will bring it back to life).
+		-- "Sniglets", Rich Hall & Friends
+%
+The rules:
+	 (1) Thou shalt not worship other computer systems.
+	 (2) Thou shalt not impersonate Liberace or eat watermelon while
+	      sitting at the console keyboard.
+	 (3) Thou shalt not slap users on the face, nor staple their silly
+	     little card decks together.
+	 (4) Thou shalt not get physically involved with the computer system,
+	     especially if you're already married.
+	 (5) Thou shalt not use magnetic tapes as frisbees, nor use a disk
+	     pack as a stool to reach another disk pack.
+	 (6) Thou shalt not stare at the blinking lights for more than one
+	     eight hour shift.
+	 (7) Thou shalt not tell users that you accidentally destroyed their
+	     files/backup just to see the look on their little faces.
+	 (8) Thou shalt not enjoy cancelling a job.
+	 (9) Thou shalt not display firearms in the computer room.
+	(10) Thou shalt not push buttons "just to see what happens".
+%
+		William Safire's Rules for Writers:
+
+Remember to never split an infinitive.  The passive voice should never be
+used.  Do not put statements in the negative form.  Verbs have to agree with
+their subjects.  Proofread carefully to see if you words out.  If you reread
+your work, you can find on rereading a great deal of repetition can be
+avoided by rereading and editing.  A writer must not shift your point of
+view.  And don't start a sentence with a conjunction.  (Remember, too, a
+preposition is a terrible word to end a sentence with.) Don't overuse
+exclamation marks!!  Place pronouns as close as possible, especially in long
+sentences, as of 10 or more words, to their antecedents.  Writing carefully,
+dangling participles must be avoided.  If any word is improper at the end of
+a sentence, a linking verb is.  Take the bull by the hand and avoid mixing
+metaphors.  Avoid trendy locutions that sound flaky.  Everyone should be
+careful to use a singular pronoun with singular nouns in their writing.
+Always pick on the correct idiom.  The adverb always follows the verb.  Last
+but not least, avoid cliches like the plague; seek viable alternatives.
+%

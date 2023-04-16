@@ -1,0 +1,59 @@
+/*
+ * mytar:  A version of tar(1) for Systems Programming I
+ *
+ * Author: Dr. Phillip Nico
+ *         Department of Computer Science
+ *         California Polytechnic State University
+ *         One Grand Avenue.
+ *         San Luis Obispo, CA  93407  USA
+ *
+ * Email:  pnico@csc.calpoly.edu
+ *
+ * Revision History:
+ *         $Log: main.c,v $
+ *         Revision 1.1  2010-10-27 21:23:35-07  pnico
+ *         Initial revision
+ *
+ *
+ */
+
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#include "options.h"
+#include "mytar.h"
+
+int main(int argc, char *argv[]){
+  /* First parse the command-line options */
+
+  int i;
+  int errors=0;
+  /*
+   * parse_options() parses the command-line options and returns
+   * the index if the first non-option argument
+   */
+  i = parse_options(argc,argv);
+
+  if ( opt_verbose > 1 )
+    print_options(stderr);
+
+  switch(opt_mode) {
+  case MT_LIST:
+    errors += list_archive(opt_tarfile, argv+i);
+    break;
+  case MT_EXTRACT:
+    errors += extract_archive(opt_tarfile, argv+i);
+    break;
+  case MT_CREATE:
+    errors += create_archive(opt_tarfile, argv+i);
+    break;
+  default:
+    fprintf(stderr, "%s: unknown mode.  Bailing...\n", argv[0]);
+    errors++;
+  }
+
+  return errors;                /* exit non-zero if errors */
+}
+

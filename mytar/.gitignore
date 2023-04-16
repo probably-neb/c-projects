@@ -1,0 +1,10 @@
+*.out
+*.tar
+*.o 
+mytar
+nico
+~Tests
+histar
+tryAsgn4*
+tags
+*.plist
